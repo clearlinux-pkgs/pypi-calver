@@ -4,7 +4,7 @@
 #
 Name     : pypi-calver
 Version  : 2022.6.26
-Release  : 3
+Release  : 4
 URL      : https://files.pythonhosted.org/packages/b5/00/96cbed7c019c49ee04b8a08357a981983db7698ae6de402e57097cefc9ad/calver-2022.6.26.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b5/00/96cbed7c019c49ee04b8a08357a981983db7698ae6de402e57097cefc9ad/calver-2022.6.26.tar.gz
 Summary  : Setuptools extension for CalVer package versions
