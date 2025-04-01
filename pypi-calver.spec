@@ -6,10 +6,10 @@
 # autospec commit: 247c192
 #
 Name     : pypi-calver
-Version  : 2025.3.31
-Release  : 9
-URL      : https://files.pythonhosted.org/packages/58/d7/ebd18f710cedddc010cc71d89ceb00425fc373ec44311aa66ed57790432d/calver-2025.3.31.tar.gz
-Source0  : https://files.pythonhosted.org/packages/58/d7/ebd18f710cedddc010cc71d89ceb00425fc373ec44311aa66ed57790432d/calver-2025.3.31.tar.gz
+Version  : 2025.4.1
+Release  : 10
+URL      : https://files.pythonhosted.org/packages/51/a5/2371326892fcea6f185c0febea51139ce4f8a68a3c5d105e54cefe99637e/calver-2025.4.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/51/a5/2371326892fcea6f185c0febea51139ce4f8a68a3c5d105e54cefe99637e/calver-2025.4.1.tar.gz
 Summary  : Setuptools extension for CalVer package versions
 Group    : Development/Tools
 License  : Apache-2.0
@@ -55,10 +55,10 @@ python3 components for the pypi-calver package.
 
 
 %prep
-%setup -q -n calver-2025.3.31
-cd %{_builddir}/calver-2025.3.31
+%setup -q -n calver-2025.4.1
+cd %{_builddir}/calver-2025.4.1
 pushd ..
-cp -a calver-2025.3.31 buildavx2
+cp -a calver-2025.4.1 buildavx2
 popd
 
 %build
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1743454954
+export SOURCE_DATE_EPOCH=1743538230
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
