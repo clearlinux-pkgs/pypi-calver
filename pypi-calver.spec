@@ -6,10 +6,10 @@
 # autospec commit: 247c192
 #
 Name     : pypi-calver
-Version  : 2025.4.1
-Release  : 10
-URL      : https://files.pythonhosted.org/packages/51/a5/2371326892fcea6f185c0febea51139ce4f8a68a3c5d105e54cefe99637e/calver-2025.4.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/51/a5/2371326892fcea6f185c0febea51139ce4f8a68a3c5d105e54cefe99637e/calver-2025.4.1.tar.gz
+Version  : 2025.4.2
+Release  : 11
+URL      : https://files.pythonhosted.org/packages/ee/28/c6c465ab2ce1882eb1ba8e0f173c1613f509eba3c60eb916fcb9b704238c/calver-2025.4.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ee/28/c6c465ab2ce1882eb1ba8e0f173c1613f509eba3c60eb916fcb9b704238c/calver-2025.4.2.tar.gz
 Summary  : Setuptools extension for CalVer package versions
 Group    : Development/Tools
 License  : Apache-2.0
@@ -17,7 +17,12 @@ Requires: pypi-calver-license = %{version}-%{release}
 Requires: pypi-calver-python = %{version}-%{release}
 Requires: pypi-calver-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(py)
 BuildRequires : pypi(setuptools)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -55,10 +60,10 @@ python3 components for the pypi-calver package.
 
 
 %prep
-%setup -q -n calver-2025.4.1
-cd %{_builddir}/calver-2025.4.1
+%setup -q -n calver-2025.4.2
+cd %{_builddir}/calver-2025.4.2
 pushd ..
-cp -a calver-2025.4.1 buildavx2
+cp -a calver-2025.4.2 buildavx2
 popd
 
 %build
@@ -66,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1743538230
+export SOURCE_DATE_EPOCH=1743613450
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
